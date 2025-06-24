@@ -5,7 +5,6 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import Header from '@/components/Header';
-import Image from 'next/image';
 import AboutSection from '@/components/mainpage/AboutSection';
 import OurProjects from '@/components/mainpage/OurProjects';
 import ServicesAvailableSection from '@/components/mainpage/OurServies';

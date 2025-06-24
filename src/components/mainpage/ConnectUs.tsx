@@ -266,6 +266,7 @@ export default function ContactSection() {
       setTouched({});
       setAnimateFields({});
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitError('Failed to submit form. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -323,7 +324,7 @@ export default function ContactSection() {
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
-            Let's Start a Conversation
+            Let&apos;s Start a Conversation
           </motion.div>
           
           <motion.h2
@@ -366,7 +367,7 @@ export default function ContactSection() {
             }}
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
           >
-            Share your vision with us and we'll transform it into a powerful digital solution. 
+            Share your vision with us and we&apos;ll transform it into a powerful digital solution. 
             Our expert team is ready to bring your ideas to life.
           </motion.p>
         </div>
@@ -398,7 +399,7 @@ export default function ContactSection() {
                 <div className="mb-8">
                   <h3 className="text-2xl md:text-3xl font-bold mb-3">Get in Touch</h3>
                   <p className="text-blue-100 text-lg">
-                    We're here to help you succeed. Reach out and let's discuss your project.
+                    We&apos;re here to help you succeed. Reach out and let&apos;s discuss your project.
                   </p>
                 </div>
 
@@ -507,7 +508,7 @@ export default function ContactSection() {
                       Tell Us About Your Project
                     </h3>
                     <p className="text-gray-600">
-                      Fill out the form below and we'll get back to you within 24 hours with a detailed proposal.
+                      Fill out the form below and we&apos;ll get back to you within 24 hours with a detailed proposal.
                     </p>
                   </div>
 
@@ -537,7 +538,7 @@ export default function ContactSection() {
                           </svg>
                         </div>
                         <h4 className="text-xl font-semibold text-gray-900 mb-2">Submission Successful!</h4>
-                        <p className="text-gray-600 mb-4">Thank you for your submission. We'll get back to you within 24 hours.</p>
+                        <p className="text-gray-600 mb-4">Thank you for your submission. We&apos;ll get back to you within 24 hours.</p>
                         <button
                           onClick={() => setSubmitSuccess(false)}
                           className="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"

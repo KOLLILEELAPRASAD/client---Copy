@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useInView, AnimatePresence, useMotionValue, useTransform, PanInfo } from 'framer-motion';
-import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useEffect, useRef, useState, useCallback } from 'react';
+import {  useEffect, useRef, useState, useCallback } from 'react';
 import { FaArrowRight, FaEye, FaCode, FaRocket, FaShoppingCart, FaBriefcase, FaChartLine, FaBlog, FaMobile, FaGraduationCap, FaPalette, FaChevronLeft, FaChevronRight, FaPlay, FaStar, FaClock } from 'react-icons/fa';
 
 // Enhanced project data with more realistic details
@@ -219,7 +219,7 @@ type Project = typeof projects[number];
 export default function EnhancedNetflixStyleProjects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState('All');
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [hoveredProject,] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -284,7 +284,10 @@ export default function EnhancedNetflixStyleProjects() {
   };
 
   // Handle drag end
-  const handleDragEnd = (_event: any, info: PanInfo) => {
+  const handleDragEnd = (
+    _event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
     const threshold = 100;
     
     if (info.offset.x > threshold) {
@@ -513,7 +516,7 @@ export default function EnhancedNetflixStyleProjects() {
               animate={isInView ? "visible" : "hidden"}
             >
               <AnimatePresence mode="popLayout">
-                {getVisibleProjects().map((project, index) => {
+                {getVisibleProjects().map((project, ) => {
                   const IconComponent = project.icon;
                   const isHovered = hoveredProject === project.id;
                   

@@ -68,7 +68,7 @@ const baseItemVariants: Variants = {
 
 export default function AboutSection() {
   const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
+  const [, setIsTablet] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {

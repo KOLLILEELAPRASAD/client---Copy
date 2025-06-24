@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { motion, useInView, useAnimation, useScroll, useTransform, easeInOut } from 'framer-motion';
-import { FaArrowRight, FaTimes, FaRobot, FaBlog, FaRocket, FaGlobe, FaCogs, FaCheck, FaStar, FaLightbulb } from 'react-icons/fa';
+import { FaArrowRight, FaTimes, FaRobot, FaBlog, FaRocket, FaGlobe, FaCogs, FaCheck, FaStar } from 'react-icons/fa';
 import { FaShop } from 'react-icons/fa6';
 
 // Enhanced services data with more details
@@ -331,7 +331,7 @@ export default function EnhancedServicesSection() {
           animate={controls}
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-8xl mx-auto mb-16"
         >
-          {services.map((service, index) => {
+          {services.map((service, ) => {
             const IconComponent = service.icon;
             const isHovered = hoveredCard === service.id;
             
