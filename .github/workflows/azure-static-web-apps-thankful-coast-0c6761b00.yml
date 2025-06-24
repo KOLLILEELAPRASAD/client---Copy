@@ -22,11 +22,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Compatible with most Next.js versions
+          node-version: '18' # Compatible with Next.js 12–14
+          cache: 'npm' # Cache npm dependencies for faster builds
       - name: Install Dependencies
         run: npm install
       - name: Build App
-        run: npm run build
+        run: npx next build && npx next export
         env:
           NODE_ENV: production
       - name: Build And Deploy
@@ -38,8 +39,8 @@ jobs:
           action: "upload"
           app_location: "/" # Root directory with package.json
           api_location: "" # Set if using Next.js API routes with Azure Functions
-          output_location: "out" # Use "build" if distDir is set to 'build' in next.config.js
-          app_build_command: "next build && next export" # Ensures static export
+          output_location: "out" # Use "build" if distDir is set to 'build'
+          app_build_command: "npx next build && npx next export"
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
